@@ -1,0 +1,10 @@
+<h3>Here are the list of CDs by <%= @artist.name() %></h3>
+
+<ul>
+  <% @artist.cds().each do |cd| %>
+  <li><a href="/cds/<%=cd.id()%>"><%=cd.title()%></a></li>
+  <% end %>
+</ul>
+
+<a href="/artists" class="btn btn-success">Return to the list of artists</a>
+<a href="/artists/<%= @artist.id() %>/cds/new" class="btn btn-primary">Add a new CD</a>

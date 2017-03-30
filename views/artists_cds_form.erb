@@ -1,0 +1,13 @@
+<h1>Add a CD to <%=@artist.name()%></h1>
+
+<form action="/cd" method="post">
+  <!-- type hidden value auto input, watch out for that, can leverage on previous artist form -->
+  <input id="artist_id" type="hidden" name="artist_id"
+  value="<%= @artist.id()%>" class"form-control">
+
+  <div class="form-group">
+    <label for="title">Vehicle's title</label>
+    <input id="title" name="title" type="text" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-success">Add Vehicle</button>
+</form>
